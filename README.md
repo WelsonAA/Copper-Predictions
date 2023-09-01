@@ -10,13 +10,13 @@ item in a sequence, given the previous items. However, RNNs can have a problem w
 because the gradient of the loss function can vanish or explode as the network goes deeper. This makes it difficult for 
 the network to learn long-term dependencies.
 ## Methodology
-### 1. Data Cleaning and Preprocessing (cleaning.ipynb)
+### 1. Data Cleaning and Preprocessing (clean.ipynb)
 - The Dataset is downloaded as a csv from [here](https://www.investing.com/commodities/copper-historical-data) into 
 *history.csv*, *history2.csv* and *history3.csv*. 
 - Data is then cleaned by removing unnecessary columns, just keeping the **Date** and the **Average Price for the Day**.
 - The cleaned data are exported as a csv in *output.csv*
 - Prices are then plotted against the corresponding dates.
-### 2. Training, Optimising and Testing the model (tutorial.ipynb)
+### 2. Training, Optimising and Testing the model (train_and_test.ipynb)
 - The cleaned, preprocessed data is loaded from **output.csv**.
 - Data is now scaled between (-1,1) using MinMaxScaler to make the learning process more efficient. When the features 
 have different scales, the gradient updates can be very large for some features and very small for others. This can make 
@@ -34,7 +34,7 @@ learning models. It is a combination of the AdaGrad and RMSProp algorithms, and 
 and effective than these algorithms.
 - Batch size is set to 16 to avoid overfitting.
 - The model was tested and achieved a mean squared error of 0.05.
-### 3. Forecasting (q4_predictions.ipynb)
+### 3. Forecasting (train_and_predict.ipynb)
 - Data is loaded and the model is prepared.
 - A DataFrame is used to store the predicted price of a week to be provided for the model when predicting each day.
 - Prices are then plotted against the corresponding dates.
