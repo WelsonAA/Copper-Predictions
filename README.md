@@ -1,6 +1,6 @@
 # **Copper Price Predictions**
 ## Introduction
-This Software aims to forecast the price of Copper, Gold or any other metal, given its price history. This Software uses
+This Software aims to forecast the price of Copper, given its price history. This Software uses
 a Long Short Term Memory to make the predictions.
 ## Long Short Term Memory (LSTM)
 It is a type of recurrent neural network (RNN) that is capable of learning long-term dependencies. This makes it 
@@ -17,7 +17,7 @@ the network to learn long-term dependencies.
 - The cleaned data are exported as a csv in *output.csv*
 - Prices are then plotted against the corresponding dates.
 ### 2. Training, Optimising and Testing the model (tutorial.ipynb)
-- The cleaned, preprocessed is loaded from **output.csv**.
+- The cleaned, preprocessed data is loaded from **output.csv**.
 - Data is now scaled between (-1,1) using MinMaxScaler to make the learning process more efficient. When the features 
 have different scales, the gradient updates can be very large for some features and very small for others. This can make 
 the learning process slow and unstable. Scaling the features to the same range helps to equalize the gradient updates 
