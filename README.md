@@ -18,12 +18,12 @@ the network to learn long-term dependencies.
 *dirty_dataset_1.csv* and *dirty_dataset_2.csv*.
 - Data is then cleaned by removing unnecessary columns, just keeping the **Date** and the **Average Price for the Day**.
 - Outliers(Prices lower than 0.1 USD) are replaced by the mean Price of the 7 previous days.
-- The cleaned data are exported as a csv in *output.csv*
+- The cleaned data are exported as a csv in *cleaned_dataset.csv*
 - Prices are then plotted against the corresponding dates.
 
 ![Clean Data Plotted](resources/plot_clean_data.png)
 ### 2. Training, Optimising and Testing the model (train_and_test.ipynb)
-- The cleaned, preprocessed data is loaded from **output.csv**.
+- The cleaned, preprocessed data is loaded from **cleaned_dataset.csv**.
 - Data is now scaled between (-1,1) using MinMaxScaler to make the learning process more efficient. When the features 
 have different scales, the gradient updates can be very large for some features and very small for others. This can make 
 the learning process slow and unstable. Scaling the features to the same range helps to equalize the gradient updates 
@@ -44,7 +44,7 @@ and effective than these algorithms.
 
 ![Test Data Plotted](resources/plot_test_data.png)
 ### 3. Forecasting (train_and_predict.ipynb)
-- Data is loaded and the model is prepared.
+- Data is loaded from **cleaned_dataset.csv** and the model is prepared.
 - A DataFrame is used to store the predicted price of a week to be provided for the model when predicting each day.
 - The model is retrained over the whole set of data again from 01-08-1988 to 01-09-2023.
 - Prices are then plotted against the corresponding dates.
