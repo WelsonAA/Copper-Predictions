@@ -46,7 +46,7 @@ and effective than these algorithms.
 ### 3. Forecasting (train_and_predict.ipynb)
 - Data is loaded from *cleaned_dataset.csv* and the model is prepared.
 - A DataFrame is used to store the predicted price of a week to be provided for the model when predicting each day.
-- The model is retrained over the whole set of data again from 01-08-1988 to 01-09-2023.
+- The model is retrained over the whole set of data again from 01-08-1988 to 21-09-2023.
 - Prices are then plotted against the corresponding dates.
 
 ![Predicted Prices Plotted](resources/plot_predict_data.png)
