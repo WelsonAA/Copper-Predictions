@@ -1,16 +1,20 @@
 # **Copper Price Predictions**
 ## Introduction
 This Software aims to forecast the price of Copper, given its price history. This Software uses
-a Long Short Term Memory to make the predictions.
+a Long Short Term Memory to make the predictions. 
 
 ## Methodology
 ### Long Short Term Memory (LSTM)
 It is a type of recurrent neural network (RNN) that is capable of learning long-term dependencies. This makes it 
-well-suited for tasks such as speech recognition, machine translation, and text generation.
-RNNs are a type of neural network that can process sequential data. This means that they can learn to predict the next 
-item in a sequence, given the previous items. However, RNNs can have a problem with long-term dependencies. This is 
-because the gradient of the loss function can vanish or explode as the network goes deeper. This makes it difficult for 
-the network to learn long-term dependencies.
+well-suited for tasks such as speech recognition, machine translation, and text generation. RNNs are a type of neural network that can process sequential data. This means that they can 
+learn to predict the next item in a sequence, given the previous items. LSTM solves RNN main issue 
+which is the vanishing gradient problem. The vanishing gradient problem is when the gradient of the loss function is 
+calculated with respect to the weights of the neural network. This gradient is then used to update the weights. The
+problem is that the gradient can get very small as it is propagated backward through the network. This means that the
+weights in the network will not be updated effectively. This makes it difficult for the network to learn long-term
+dependencies in the data. LSTM solves this problem by using a gating mechanism. This mechanism can learn which data in
+a sequence is important to keep or throw away. By doing this, it can pass relevant information down the long chain of
+cells to make predictions. This LSTM is using a *tanh* function.
 
 ![LSTM](resources/lstm.png)
 ### 1. Data Cleaning and Preprocessing (clean.ipynb)
@@ -50,6 +54,12 @@ and effective than these algorithms.
 - Prices are then plotted against the corresponding dates.
 
 ![Predicted Prices Plotted](resources/plot_predict_data.png)
+
+
+- Q4 Prices are now evaluated for comparison with the last 5 years of the actual prices.
+
+![Q4 Prices Plotted](resources/plot_evaluation_data.png)
+
 ## Conclusion
 This model is perfect for prediciting the prices of Copper and other metals, however this model is data-hungry and requires large 
-dataset to train.
+dataset to train. 
