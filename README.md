@@ -43,7 +43,7 @@ parameters are tuned by Adam. Adam is an adaptive learning rate optimization alg
 learning models. It is a combination of the AdaGrad and RMSProp algorithms, and it is designed to be more efficient 
 and effective than these algorithms.
 - Batch size is set to 16 to avoid overfitting.
-- The model was tested and achieved a mean squared error of 0.06.
+- The model was tested and achieved a root mean squared error of 0.06.
 - The predicted prices for the test data and the actual prices are plotted on the same graph for comparison.
 
 ![Test Data Plotted](resources/plot_test_data.png)
